@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMKPUMA Store — Produk Digital Terpercaya</title>
+
+  <!-- Midtrans Snap.js Sandbox -->
+  <script src="https://app.sandbox.midtrans.com/snap/snap.js"
+          data-client-key="Mid-client-c9vrrD6PI9bDyTLx"></script>
+  <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  MIDTRANS SANDBOX KEYS — GANTI SEBELUM DIGUNAKAN            ║
+    ║  Client Key  → ganti nilai data-client-key di atas          ║
+    ║  Server Key  → ganti MIDTRANS_SERVER_KEY di bagian <script> ║
+    ║  Dapatkan key di: https://dashboard.sandbox.midtrans.com    ║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+<script
+    chatbot_id="69eadc2ea04500ad3f0e7472"
+    data-type="default"
+    src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js"
+></script>
+  <style>
+    /* ─── CSS VARIABLES ─────────────────────────────────────── */
+    :root {
+      --bg-base:      #0d0d12;
+      --bg-card:      #16161f;
+      --bg-card-hover:#1c1c28;
+      --bg-input:     #1a1a25;
+      --purple-deep:  #5b21b6;
+      --purple-main:  #7c3aed;
+      --purple-soft:  #a78bfa;
+      --purple-glow:  #7c3aed44;
+      --gray-900:     #1e1e2e;
+      --gray-700:     #3a3a52;
+      --gray-500:     #6b6b8a;
+      --gray-300:     #a0a0b8;
+      --gray-100:     #e2e2f0;
+      --white:        #f5f5ff;
+      --shadow-card:  0 4px 24px rgba(0,0,0,0.45);
+      --shadow-purple:0 0 32px rgba(124,58,237,0.25);
+      --radius-sm:    10px;
+      --radius-md:    16px;
+      --radius-lg:    24px;
+      --radius-xl:    32px;
+      --transition:   0.25s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ─── RESET & BASE ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg-base);
+      color: var(--gray-100);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; outline: none; }
+    ul { list-style: none; }
+
+    /* ─── UTILITY ───────────────────────────────────────────── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 1rem;
+      margin-bottom: 48px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .btn-primary {
+      background: var(--purple-main);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+    }
+    .btn-primary:hover {
+      background: #6d28d9;
+      box-shadow: 0 6px 28px rgba(124,58,237,0.55);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--purple-soft);
+      border: 2px solid var(--purple-main);
+    }
+    .btn-outline:hover {
+      background: var(--purple-glow);
+      transform: translateY(-2px);
+    }
+
+    /* ─── NAVBAR ────────────────────────────────────────────── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,13,18,0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--gray-700);
+    }
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 66px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .nav-logo span {
+      color: var(--purple-soft);
+    }
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: var(--purple-main);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-menu a {
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--gray-300);
+      transition: var(--transition);
+    }
+    .nav-menu a:hover, .nav-menu a.active {
+      color: var(--white);
+      background: var(--purple-glow);
+    }
+    .nav-cta {
+      background: var(--purple-main);
+      color: var(--white) !important;
+      padding: 8px 20px !important;
+      border-radius: var(--radius-sm) !important;
+    }
+    .nav-cta:hover { background: #6d28d9 !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--gray-300);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── HERO ──────────────────────────────────────────────── */
+    .hero {
+      padding: 96px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 64px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.4);
+      color: var(--purple-soft);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .hero-badge::before { content: '✦'; }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--purple-soft), #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      color: var(--gray-300);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-img-wrap {
+      position: relative;
+    }
+    .hero-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle at center, var(--purple-glow), transparent 70%);
+      border-radius: var(--radius-xl);
+      z-index: 0;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-purple), var(--shadow-card);
+      position: relative;
+      z-index: 1;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 36px;
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--purple-soft);
+    }
+    .stat-lbl {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ─── KEUNGGULAN ────────────────────────────────────────── */
+    .why {
+      padding: 96px 0;
+      background: linear-gradient(180deg, var(--bg-base) 0%, var(--gray-900) 100%);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .why-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .why-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--purple-glow), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .why-card:hover {
+      border-color: var(--purple-main);
+      background: var(--bg-card-hover);
+      box-shadow: var(--shadow-purple);
+      transform: translateY(-4px);
+    }
+    .why-card:hover::after { opacity: 1; }
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+    .why-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .why-card p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    /* ─── PRODUK ─────────────────────────────────────────────── */
+    .products {
+      padding: 96px 0;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow-card);
+    }
+    .product-card:hover {
+      border-color: var(--purple-main);
+      box-shadow: var(--shadow-purple), var(--shadow-card);
+      transform: translateY(-6px);
+    }
+    .product-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .product-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img { transform: scale(1.05); }
+    .product-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: var(--purple-main);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .product-body {
+      padding: 24px;
+    }
+    .product-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .product-body p {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--purple-soft);
+    }
+    .product-price small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--gray-500);
+    }
+    .btn-buy {
+      padding: 10px 22px;
+      background: var(--purple-main);
+      color: var(--white);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .btn-buy:hover {
+      background: #6d28d9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(124,58,237,0.45);
+    }
+
+    /* ─── CHECKOUT MODAL ─────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(6px);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: var(--bg-card);
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 480px;
+      position: relative;
+      animation: modalIn 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes modalIn {
+      from { opacity:0; transform: scale(0.92) translateY(16px); }
+      to   { opacity:1; transform: scale(1) translateY(0); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: var(--gray-700);
+      color: var(--gray-300);
+      border: none;
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+    }
+    .modal-close:hover { background: #ef4444; color: #fff; }
+    .modal h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .modal-product-name {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin-bottom: 24px;
+    }
+    .modal-product-name strong { color: var(--purple-soft); }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-300);
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-input);
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius-sm);
+      color: var(--white);
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--purple-main);
+      box-shadow: 0 0 0 3px var(--purple-glow);
+    }
+    .form-group input[readonly] {
+      color: var(--gray-500);
+      cursor: not-allowed;
+    }
+    .order-info {
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .order-info span { font-size: 0.82rem; color: var(--gray-500); }
+    .order-info strong { color: var(--purple-soft); font-size: 1.1rem; }
+    .btn-pay {
+      width: 100%;
+      padding: 15px;
+      background: var(--purple-main);
+      color: var(--white);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 700;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-pay:hover:not(:disabled) {
+      background: #6d28d9;
+      box-shadow: 0 6px 24px rgba(124,58,237,0.5);
+    }
+    .btn-pay:disabled { opacity: 0.65; cursor: not-allowed; }
+    .btn-pay .spinner {
+      display: none;
+      width: 18px; height: 18px;
+      border: 2.5px solid rgba(255,255,255,0.35);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin-right: 8px;
+    }
+    .btn-pay.loading .spinner { display: inline-block; }
+    .btn-pay.loading .btn-pay-text { opacity: 0.7; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── FAQ ───────────────────────────────────────────────── */
+    .faq {
+      padding: 96px 0;
+      background: var(--gray-900);
+    }
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius-md);
+      margin-bottom: 14px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item.open { border-color: var(--purple-main); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      text-align: left;
+      color: var(--white);
+      font-size: 0.97rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .faq-question:hover { color: var(--purple-soft); }
+    .faq-icon {
+      width: 28px; height: 28px;
+      flex-shrink: 0;
+      background: var(--gray-700);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    .faq-item.open .faq-icon {
+      background: var(--purple-main);
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      padding: 0 24px;
+      color: var(--gray-500);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding: 0 24px 20px;
+    }
+
+    /* ─── FOOTER ────────────────────────────────────────────── */
+    footer {
+      background: var(--bg-base);
+      border-top: 1px solid var(--gray-700);
+      padding: 40px 0 32px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .footer-logo span { color: var(--purple-soft); }
+    footer p {
+      font-size: 0.82rem;
+      color: var(--gray-500);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    footer p + p { margin-top: 8px; }
+
+    /* ─── TOAST ─────────────────────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius-sm);
+      padding: 14px 20px;
+      font-size: 0.875rem;
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all 0.35s ease;
+      z-index: 9999;
+      max-width: 320px;
+    }
+    #toast.show { transform: translateY(0); opacity: 1; }
+    #toast.error { border-color: #ef4444; }
+    #toast.success { border-color: #22c55e; }
+
+    /* ─── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+      }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-desc { margin: 0 auto 36px; }
+      .hero-img-wrap { max-width: 480px; margin: 0 auto; }
+    }
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: fixed;
+        top: 66px; left: 0; right: 0;
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 16px 20px 24px;
+        border-bottom: 1px solid var(--gray-700);
+        gap: 4px;
+      }
+      .nav-menu.open { display: flex; }
+      .nav-menu a {
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        width: 100%;
+      }
+      .hamburger { display: flex; }
+      .modal { padding: 28px 20px; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <header>
+    <nav class="navbar" aria-label="Navigasi utama">
+      <div class="container">
+        <a href="#" class="nav-logo" aria-label="SMKPUMA Store">
+          <div class="nav-logo-icon">🛍️</div>
+          SMKPUMA <span>Store</span>
+        </a>
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none"><a href="#" class="active" role="menuitem">Home</a></li>
+          <li role="none"><a href="#produk" role="menuitem">Produk</a></li>
+          <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+          <li role="none"><a href="#kontak" role="menuitem" class="nav-cta">Kontak</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">Produk Digital Terpercaya</div>
+          <h1>Temukan Produk<br>Digital <em>Terbaik</em><br>untuk Hidupmu</h1>
+          <p class="hero-desc">
+            Dari kopi premium hingga camilan lezat — dapatkan produk pilihan berkualitas tinggi
+            dengan harga terjangkau. Sekali bayar, nikmati selamanya.
+          </p>
+          <div class="hero-actions">
+            <a href="#produk" class="btn btn-primary">🛒 Lihat Produk</a>
+            <a href="#produk" class="btn btn-outline">⚡ Beli Sekarang</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-val">500+</span>
+              <span class="stat-lbl">Produk</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">2K+</span>
+              <span class="stat-lbl">Pelanggan</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">4.9★</span>
+              <span class="stat-lbl">Rating</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-img-wrap">
+          <img
+            src="https://placehold.net/default.png"
+            alt="Ilustrasi produk digital SMKPUMA Store"
+            class="hero-img"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         MENGAPA MEMILIH KAMI
+    ══════════════════════════════════════ -->
+    <section class="why" id="mengapa" aria-labelledby="why-title">
+      <div class="container">
+        <h2 class="section-title" id="why-title">Mengapa Memilih Kami?</h2>
+        <p class="section-sub">Kami hadir dengan solusi terbaik untuk kebutuhan produk digitalmu.</p>
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="why-icon">🏆</div>
+            <h3>Produk Digital Berkualitas</h3>
+            <p>Setiap produk dikurasi dengan ketat, memastikan kualitas terbaik yang memenuhi standar profesional.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-icon">🔐</div>
+            <h3>Sekali Beli, Akses Selamanya</h3>
+            <p>Bayar satu kali dan nikmati akses penuh seumur hidup tanpa biaya langganan tambahan.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-icon">🚀</div>
+            <h3>Cocok untuk Pemula</h3>
+            <p>Panduan lengkap dan dukungan penuh tersedia — mulai dari nol tanpa kebingungan.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-icon">🌿</div>
+            <h3>Hemat &amp; Ramah Lingkungan</h3>
+            <p>Produk digital berarti nol limbah fisik. Hemat uang dan ikut jaga kelestarian bumi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PRODUK
+    ══════════════════════════════════════ -->
+    <section class="products" id="produk" aria-labelledby="products-title">
+      <div class="container">
+        <h2 class="section-title" id="products-title">Produk Unggulan</h2>
+        <p class="section-sub">Pilihan terbaik kami — berkualitas, terjangkau, dan siap kirim.</p>
+        <div class="products-grid">
+
+          <!-- Produk 1 -->
+          <article class="product-card">
+            <div class="product-img-wrap">
+              <img
+                src="https://placehold.net/default.png"
+                alt="Kopi Premium Arabica"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="product-badge">Terlaris</span>
+            </div>
+            <div class="product-body">
+              <h3>Kopi Premium Arabica</h3>
+              <p>Kopi arabica pilihan dari dataran tinggi Gayo. Rasa penuh, aroma kuat, sempurna untuk harimu.</p>
+              <div class="product-footer">
+                <div class="product-price">
+                  <small>Mulai dari</small>
+                  Rp 45.000
+                </div>
+                <button
+                  class="btn-buy"
+                  onclick="openCheckout('prod-001', 'Kopi Premium Arabica', 45000)"
+                  aria-label="Beli Kopi Premium Arabica">
+                  Beli
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produk 2 -->
+          <article class="product-card">
+            <div class="product-img-wrap">
+              <img
+                src="https://placehold.net/default.png"
+                alt="Kopi Robusta Toraja"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="product-badge">Baru</span>
+            </div>
+            <div class="product-body">
+              <h3>Kopi Robusta Toraja</h3>
+              <p>Cita rasa bold dan earthy dari biji robusta Toraja. Cocok untuk espresso dan kopi susu kekinian.</p>
+              <div class="product-footer">
+                <div class="product-price">
+                  <small>Mulai dari</small>
+                  Rp 38.000
+                </div>
+                <button
+                  class="btn-buy"
+                  onclick="openCheckout('prod-002', 'Kopi Robusta Toraja', 38000)"
+                  aria-label="Beli Kopi Robusta Toraja">
+                  Beli
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produk 3 -->
+          <article class="product-card">
+            <div class="product-img-wrap">
+              <img
+                src="https://placehold.net/default.png"
+                alt="Keripik Singkong Pedas"
+                class="product-img"
+                loading="lazy"
+              />
+              <span class="product-badge">Hot 🔥</span>
+            </div>
+            <div class="product-body">
+              <h3>Keripik Singkong Pedas</h3>
+              <p>Keripik singkong renyah dengan balutan bumbu pedas spesial. Camilan wajib di setiap momen.</p>
+              <div class="product-footer">
+                <div class="product-price">
+                  <small>Mulai dari</small>
+                  Rp 25.000
+                </div>
+                <button
+                  class="btn-buy"
+                  onclick="openCheckout('prod-003', 'Keripik Singkong Pedas', 25000)"
+                  aria-label="Beli Keripik Singkong Pedas">
+                  Beli
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section-title" id="faq-title">Pertanyaan Umum</h2>
+        <p class="section-sub">Punya pertanyaan? Kami punya jawabannya.</p>
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              Apakah produk bisa dikembalikan setelah pembelian?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Untuk produk digital seperti file unduhan, pengembalian tidak dapat dilakukan setelah berhasil diunduh.
+              Namun jika terdapat masalah teknis atau file rusak, tim kami siap membantu penggantian dalam 7×24 jam.
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              Metode pembayaran apa saja yang tersedia?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Kami mendukung berbagai metode pembayaran melalui Midtrans, termasuk transfer bank, e-wallet (GoPay, OVO, DANA),
+              QRIS, minimarket (Alfamart &amp; Indomaret), serta kartu kredit/debit Visa dan Mastercard.
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false">
+              Bagaimana cara mendapatkan produk setelah pembayaran?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Setelah pembayaran berhasil dikonfirmasi, link unduhan atau akses produk akan dikirim otomatis ke email
+              yang kamu daftarkan saat checkout. Proses pengiriman berlangsung instan — biasanya kurang dari 5 menit.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer id="kontak" aria-label="Footer">
+    <div class="container">
+      <div class="footer-logo">SMKPUMA <span>Store</span></div>
+      <p>© 2025 SMKPUMA Store. Seluruh hak cipta dilindungi undang-undang.</p>
+      <p>
+        Platform ini hanya untuk keperluan edukasi dan demonstrasi. Transaksi menggunakan
+        lingkungan sandbox Midtrans — tidak ada uang nyata yang diproses.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       MODAL CHECKOUT
+  ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Tutup modal">✕</button>
+      <h2 id="modal-title">🛒 Checkout</h2>
+      <p class="modal-product-name">Produk: <strong id="modalProductName">—</strong></p>
+
+      <div class="order-info">
+        <span>Total Pembayaran</span>
+        <strong id="modalPriceDisplay">Rp 0</strong>
+      </div>
+
+      <form id="checkoutForm" onsubmit="handleCheckout(event)" novalidate>
+        <!-- Hidden fields -->
+        <input type="hidden" id="orderId"      name="order_id" />
+        <input type="hidden" id="grossAmount"  name="gross_amount" />
+        <input type="hidden" id="productId"    name="product_id" />
+
+        <div class="form-group">
+          <label for="emailInput">Alamat Email</label>
+          <input
+            type="email"
+            id="emailInput"
+            name="email"
+            placeholder="nama@email.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneInput">Nomor HP / WhatsApp</label>
+          <input
+            type="tel"
+            id="phoneInput"
+            name="phone"
+            placeholder="08xxxxxxxxxx"
+            required
+            autocomplete="tel"
+          />
+        </div>
+
+        <button type="submit" class="btn-pay" id="btnPay">
+          <span class="spinner" aria-hidden="true"></span>
+          <span class="btn-pay-text">💳 Bayar Sekarang</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TOAST NOTIFICATION
+  ══════════════════════════════════════ -->
+  <div id="toast" role="alert" aria-live="polite"></div>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════════════════════ -->
+  <script>
+    /* ──────────────────────────────────────────────────────────
+       MIDTRANS CONFIGURATION
+       ─────────────────────────────────────────────────────────
+       Ganti nilai di bawah sebelum deploy:
+       ▸ MIDTRANS_SERVER_KEY → Server Key dari Midtrans Sandbox
+         Format: SB-Mid-server-xxxxxxxxxxxxxxxx
+       ▸ Client Key sudah diset di <script src="snap.js" data-client-key="...">
+         Format: SB-Mid-client-xxxxxxxxxxxxxxxx
+       ▸ Dapatkan key di: https://dashboard.sandbox.midtrans.com
+         Settings → Access Keys
+    ────────────────────────────────────────────────────────── */
+    const MIDTRANS_SERVER_KEY = "Mid-server-DfAWkuXz3W8CA_Q1KHVSpKD2";
+
+    /* Endpoint Midtrans via CORS proxy (untuk demo frontend-only)
+       Catatan: Pada produksi, endpoint ini HARUS dipanggil dari backend
+       agar Server Key tidak terekspos ke publik.                        */
+    const MIDTRANS_ENDPOINT =
+      "https://corsproxy.io/https://app.sandbox.midtrans.com/snap/v1/transactions";
+
+    /* ─── NAVBAR HAMBURGER ──────────────────────────────────── */
+    const hamburger = document.getElementById("hamburger");
+    const navMenu   = document.getElementById("navMenu");
+
+    hamburger.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      hamburger.classList.toggle("open", isOpen);
+      hamburger.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Tutup menu saat link diklik
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        hamburger.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    /* ─── FAQ ACCORDION ─────────────────────────────────────── */
+    document.querySelectorAll(".faq-question").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const item   = btn.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+
+        // Tutup semua
+        document.querySelectorAll(".faq-item").forEach(el => {
+          el.classList.remove("open");
+          el.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+        });
+
+        // Buka yang diklik (jika sebelumnya tertutup)
+        if (!isOpen) {
+          item.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    /* ─── TOAST HELPER ──────────────────────────────────────── */
+    function showToast(msg, type = "info") {
+      const toast = document.getElementById("toast");
+      toast.textContent = msg;
+      toast.className = `show ${type}`;
+      setTimeout(() => { toast.className = ""; }, 3800);
+    }
+
+    /* ─── FORMAT RUPIAH ─────────────────────────────────────── */
+    function formatRupiah(amount) {
+      return "Rp " + Number(amount).toLocaleString("id-ID");
+    }
+
+    /* ─── GENERATE ORDER ID ─────────────────────────────────── */
+    function generateOrderId() {
+      return "DE-" + Date.now();
+    }
+
+    /* ─── OPEN CHECKOUT MODAL ───────────────────────────────── */
+    function openCheckout(productId, productName, price) {
+      const orderId = generateOrderId();
+
+      // Isi hidden fields
+      document.getElementById("orderId").value     = orderId;
+      document.getElementById("grossAmount").value = price;
+      document.getElementById("productId").value   = productId;
+
+      // Isi tampilan
+      document.getElementById("modalProductName").textContent = productName;
+      document.getElementById("modalPriceDisplay").textContent = formatRupiah(price);
+
+      // Reset form
+      document.getElementById("checkoutForm").reset();
+
+      // Tampilkan modal
+      const overlay = document.getElementById("checkoutModal");
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+
+      // Fokus email untuk aksesibilitas
+      setTimeout(() => document.getElementById("emailInput").focus(), 100);
+    }
+
+    /* ─── CLOSE MODAL ───────────────────────────────────────── */
+    function closeModal() {
+      document.getElementById("checkoutModal").classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    document.getElementById("modalClose").addEventListener("click", closeModal);
+    document.getElementById("checkoutModal").addEventListener("click", e => {
+      if (e.target === e.currentTarget) closeModal();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    /* ─── HANDLE CHECKOUT (MIDTRANS SNAP) ───────────────────── */
+    async function handleCheckout(e) {
+      e.preventDefault();
+
+      const email  = document.getElementById("emailInput").value.trim();
+      const phone  = document.getElementById("phoneInput").value.trim();
+      const amount = parseInt(document.getElementById("grossAmount").value, 10);
+      const orderId = document.getElementById("orderId").value;
+      const productId   = document.getElementById("productId").value;
+      const productName = document.getElementById("modalProductName").textContent;
+
+      // Validasi sederhana
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showToast("⚠️ Masukkan alamat email yang valid.", "error");
+        document.getElementById("emailInput").focus();
+        return;
+      }
+      if (!phone || phone.length < 9) {
+        showToast("⚠️ Masukkan nomor HP yang valid.", "error");
+        document.getElementById("phoneInput").focus();
+        return;
+      }
+
+      // Set loading state
+      const btnPay = document.getElementById("btnPay");
+      btnPay.disabled = true;
+      btnPay.classList.add("loading");
+      btnPay.querySelector(".btn-pay-text").textContent = "Memproses...";
+
+      /* ──────────────────────────────────────────────────────
+         MIDTRANS SNAP API CALL
+         Dokumentasi: https://docs.midtrans.com/docs/snap-snap-integration-guide
+         ⚠️  PERHATIAN: Pada produksi, request ini HARUS dilakukan dari
+             backend/server agar Server Key tidak terekspos di browser!
+             Ini adalah contoh frontend-only untuk tujuan demo/sandbox.
+      ────────────────────────────────────────────────────── */
+      const payload = {
+        transaction_details: {
+          order_id:     orderId,   // ID unik transaksi
+          gross_amount: amount     // Total harga dalam Rupiah (integer)
+        },
+        item_details: [
+          {
+            id:       productId,   // ID produk
+            price:    amount,      // Harga satuan
+            quantity: 1,           // Jumlah item
+            name:     productName  // Nama produk (maks 50 karakter)
+          }
+        ],
+        customer_details: {
+          email: email,            // Email pembeli
+          phone: phone             // Nomor HP pembeli
+        }
+      };
+
+      // Header Authorization: Basic base64(ServerKey + ":")
+      const authHeader = "Basic " + btoa(MIDTRANS_SERVER_KEY + ":");
+
+      try {
+        const response = await fetch(MIDTRANS_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": authHeader
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          // Tangani error dari Midtrans
+          const errMsg = data.error_messages
+            ? data.error_messages.join(", ")
+            : (data.message || "Terjadi kesalahan pada server pembayaran.");
+          throw new Error(errMsg);
+        }
+
+        const snapToken = data.token;
+
+        if (!snapToken) {
+          throw new Error("Token pembayaran tidak diterima. Cek konfigurasi Midtrans.");
+        }
+
+        // Tutup modal sebelum membuka Snap
+        closeModal();
+
+        /* ──────────────────────────────────────────────────
+           BUKA SNAP PAYMENT UI
+           window.snap.pay() disediakan oleh Snap.js yang
+           diload di <head>. Pastikan Client Key sudah diisi.
+        ────────────────────────────────────────────────── */
+        window.snap.pay(snapToken, {
+          onSuccess: function(result) {
+            showToast("✅ Pembayaran berhasil! Terima kasih, " + email, "success");
+            console.log("Snap onSuccess:", result);
+          },
+          onPending: function(result) {
+            showToast("⏳ Pembayaran menunggu konfirmasi. Cek email kamu.", "info");
+            console.log("Snap onPending:", result);
+          },
+          onError: function(result) {
+            showToast("❌ Pembayaran gagal. Silakan coba lagi.", "error");
+            console.error("Snap onError:", result);
+          },
+          onClose: function() {
+            showToast("ℹ️ Kamu menutup halaman pembayaran.", "info");
+          }
+        });
+
+      } catch (err) {
+        console.error("Checkout error:", err);
+        showToast("❌ " + err.message, "error");
+      } finally {
+        // Reset loading state
+        btnPay.disabled = false;
+        btnPay.classList.remove("loading");
+        btnPay.querySelector(".btn-pay-text").textContent = "💳 Bayar Sekarang";
+      }
+    }
+  </script>
+
+</body>
+</html>
