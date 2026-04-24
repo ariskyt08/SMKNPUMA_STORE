@@ -1,0 +1,1 @@
+# SMKNPUMA_STORE
